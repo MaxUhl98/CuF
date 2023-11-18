@@ -1,9 +1,9 @@
-from python_lab.libcfcg import cf
+from library.libcfcg import cf
 import sys
 import time
 import random
 from typing import List
-
+import os
 
 def get_points(window: cf.WindowRasterized):
     colors = [cf.Color.YELLOW, cf.Color.RED, cf.Color.WHITE, cf.Color.CYAN]
@@ -25,6 +25,7 @@ def iteration(start_point: cf.Point, points: List[cf.Point], window: cf.WindowRa
 
 
 if __name__ == '__main__':
+    print(os.getcwd())
     i_range = 750
     j_range = 750
     points = []

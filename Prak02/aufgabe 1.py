@@ -1,4 +1,4 @@
-from library.libcfcg import cf, helper
+from libcfcg import cf,helper
 import numpy as np
 import random as r
 import sys
@@ -13,6 +13,7 @@ def iteration(point: cf.Point, transforms: np.ndarray, col: cf.Color) -> cf.Poin
 
 
 if __name__ == '__main__':
+
     i_range = 512
     j_range = 512
     n_iter = int(1.5 * 10 ** 4)
