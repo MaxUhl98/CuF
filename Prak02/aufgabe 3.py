@@ -57,5 +57,4 @@ if __name__ == '__main__':
             sys.stdout.flush()
             window.show()
             current_col = cf.Color_RandomColor()
-    while 1:
-        window.show()
+    window.waitKey()
