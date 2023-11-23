@@ -50,18 +50,18 @@ if __name__ == '__main__':
     window.waitKey()
 
     i_range, j_range = 512, 512
-    window2 = cf.WindowRasterized(i_range, j_range, "Aufgabe 6", cf.Color.WHITE)
-    window2.setWindowDisplayScale(2.0)
-    window2.show()
+    window = cf.WindowRasterized(i_range, j_range, "Aufgabe 6", cf.Color.WHITE)
+    window.setWindowDisplayScale(2.0)
+    window.show()
     second_field = np.zeros((i_range, j_range))
     ant1 = Ant(cf.Point(random.randrange(0, 512), random.randrange(0, 512)), direction=random.randrange(0, 4))
     ant2 = Ant(cf.Point(random.randrange(0, 512), random.randrange(0, 512)), color=cf.Color.GREEN,
                direction=random.randrange(0, 4))
     for i in range(n_iter):
-        second_field, window2 = ant1.move(second_field, window2)
-        second_field, window2 = ant2.move(second_field, window2)
+        second_field, window = ant1.move(second_field, window)
+        second_field, window = ant2.move(second_field, window)
         print(i)
         if i % 100 == 0:
             sys.stdout.flush()
             window.show()
-    window2.waitKey()
+    window.waitKey()
