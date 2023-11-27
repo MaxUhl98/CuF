@@ -24,7 +24,7 @@ if __name__ == '__main__':
     j_range = 512
     n_iter = int(1.5 * 10 ** 4)
     points = []
-    filename = 'Strauch.ifs'
+    filename = 'Farn_2.ifs'
 
     ifs = cf.IteratedFunctionSystem()
     ifs.read(f"../library/chaos_files/{filename}")
