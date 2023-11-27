@@ -1,4 +1,4 @@
-from library.libcfcg import cf, helper
+from libcfcg import cf, helper
 import numpy as np
 import random as r
 import sys

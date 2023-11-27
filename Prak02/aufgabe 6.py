@@ -14,7 +14,8 @@ class Ant:
         self.direction = direction
         self.color = color
 
-    def move(self, field: np.ndarray, win: cf.WindowRasterized, win_size: int = 512) -> (np.ndarray, cf.WindowRasterized):
+    def move(self, field: np.ndarray, win: cf.WindowRasterized, win_size: int = 512) -> (
+    np.ndarray, cf.WindowRasterized):
         if field[int(self.position.x), int(self.position.y)]:
             win.setColor(int(self.position.x), int(self.position.y), cf.Color.WHITE)
             field[int(self.position.x), int(self.position.y)] = 0
@@ -29,12 +30,12 @@ class Ant:
             self.direction = self.direction % 4
             self.position = cf.Point((int(self.position.x) + self.movement_map[self.direction][0]) % win_size,
                                      (int(self.position.y) + self.movement_map[self.direction][1]) % win_size)
-        return field,win
+        return field, win
 
 
 if __name__ == '__main__':
     i_range, j_range = 101, 101
-    n_iter, n_test = int(5 * 10 ** 4), 10
+    n_iter, n_test = int(5 * 10 ** 6), 10
     first_field = np.zeros((i_range, j_range))
     # image corresponding to the 2D float interval
     window = cf.WindowRasterized(i_range, j_range, "Aufgabe 6 Test", cf.Color.WHITE)
@@ -43,7 +44,7 @@ if __name__ == '__main__':
     ant1 = Ant(cf.Point(i_range // 2, j_range // 2))
     ant2 = Ant(cf.Point(i_range // 2, j_range // 4), color=cf.Color.GREEN, direction=2)
     for i in range(n_test):
-        first_field,window = ant1.move(first_field, window)
+        first_field, window = ant1.move(first_field, window)
         # first_field = ant2.move(first_field, window)
         sys.stdout.flush()
         window.show()
@@ -51,7 +52,7 @@ if __name__ == '__main__':
 
     i_range, j_range = 512, 512
     window = cf.WindowRasterized(i_range, j_range, "Aufgabe 6", cf.Color.WHITE)
-    window.setWindowDisplayScale(2.0)
+    window.setWindowDisplayScale(1.5)
     window.show()
     second_field = np.zeros((i_range, j_range))
     ant1 = Ant(cf.Point(random.randrange(0, 512), random.randrange(0, 512)), direction=random.randrange(0, 4))
@@ -60,7 +61,6 @@ if __name__ == '__main__':
     for i in range(n_iter):
         second_field, window = ant1.move(second_field, window)
         second_field, window = ant2.move(second_field, window)
-        print(i)
         if i % 100 == 0:
             sys.stdout.flush()
             window.show()
