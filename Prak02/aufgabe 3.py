@@ -1,4 +1,4 @@
-from libcfcg import cf, helper
+from library.libcfcg import cf, helper
 import numpy as np
 import random as r
 import sys
@@ -24,7 +24,7 @@ if __name__ == '__main__':
     j_range = 512
     n_iter = int(1.5 * 10 ** 4)
     points = []
-    filename = 'Farn_2.ifs'
+    filename = 'Strauch.ifs'
 
     ifs = cf.IteratedFunctionSystem()
     ifs.read(f"../library/chaos_files/{filename}")

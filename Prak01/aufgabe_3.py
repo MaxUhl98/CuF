@@ -67,11 +67,11 @@ if __name__ == '__main__':
     window.setWindowDisplayScale(512 / i_range)
 
     # Erhalte die Punkte gemäß der Farbregel
-    points = draw_pascal(arr, 32, win=window)
+    points = draw_pascal(arr, 3, win=window)
 
     # Setze die Farbe der ausgewählten Punkte auf Rot
     for i in points:
-        window.setColor(i[0], i[1], cf.Color.RED)
+        window.setColor(i[1], i[0], cf.Color.RED)
 
     # Fenster anzeigen
     window.show()
