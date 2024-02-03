@@ -30,8 +30,8 @@ if __name__ == '__main__':
         z_new = .5 * z_old + .5 * (z_new + dt * z_diff)
 
         if i >= 1000:
-            print([x_old, y_old, z_old])
-            print([x_new, y_new, z_new])
+            #print([x_old, y_old, z_old])
+            #print([x_new, y_new, z_new])
             win.drawLine(cf.Point(x_old, y_old / 2 + z_old), cf.Point(x_new, y_new / 2 + z_old), 1,
                          cf.Color.RandomColor())
 
