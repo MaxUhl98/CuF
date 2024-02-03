@@ -28,7 +28,7 @@ if __name__ == '__main__':
     # Konstanten für die Iteration
     i_range = 512
     j_range = 512
-    n_iter = int(1.5 * 10 ** 4)
+    n_iter = int(1.5 * 10 ** 5)
     points = []
     filename = 'Farn_1.ifs'
 
@@ -51,7 +51,7 @@ if __name__ == '__main__':
     window.show()
 
     # Startpunkt und erste Farbe für die Iteration festlegen
-    start_point = cf.Point(1, 1)
+    start_point = cf.Point(0,0)
     current_col = cf.Color_RandomColor()
 
     # Führe die Iteration durch und update das Fenster alle 100 Iterationen

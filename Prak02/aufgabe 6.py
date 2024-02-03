@@ -5,6 +5,7 @@ import random
 
 
 class Ant:
+    """Klasse die das Verhalten der Ameise aus der Aufgabe emuliert"""
     movement_map = {0: (0, -1), 1: (1, 0), 2: (0, 1), 3: (-1, 0)}
 
     def __init__(self, pos: cf.Point, direction: int = 0, color: cf.Color = cf.Color.RED):

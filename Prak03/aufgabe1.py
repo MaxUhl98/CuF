@@ -12,7 +12,7 @@ def mySign(value):  # difference to NumPy:  mySign(0)=1    !!!
 
 if __name__ == '__main__':
     filename = "Henon.orb"
-    henon_changer = -1.25
+    henon_changer = -1
     orb = cf.Orbit()
     orb.read(f'../library/chaos_files/{filename}')
     x_interval, y_interval = cf.Interval(orb.getRangeX().getMin(), orb.getRangeX().getMax()), cf.Interval(

@@ -112,17 +112,17 @@ def loadColorsFromPalFile(path: str) -> list[cf.Color]:
     :return: Eine Liste von cf.Color-Objekten aus der PAL-Datei.
     """
     file = open(path)
-    colors = []
+    _colors = []
     while True:
         line = file.readline()
         if len(line) == 0:
             break
 
         s = line.split(',')
-        colors.append(cf.Color(int(s[0]), int(s[1]), int(s[2])))
+        _colors.append(cf.Color(int(s[0]), int(s[1]), int(s[2])))
 
     file.close()
-    return colors
+    return _colors
 
 
 if __name__ == '__main__':
