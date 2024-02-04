@@ -5,7 +5,6 @@ import numpy as np
 
 if __name__ == '__main__':
     n_iter = 2 * 10 ** 4
-    # Irgendwie ist mit den Koordinaten aus der Aufgabe der Attraktor nicht vollständig sichtbar
     win = cf.WindowVectorized(512, cf.Interval(-22, 22), cf.Interval(-1, 55))
     a, b, c = 10, 2.667, 28
     x_old, y_old, z_old = 1, 1, 1
